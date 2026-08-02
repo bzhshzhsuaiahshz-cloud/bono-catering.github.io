@@ -1,0 +1,53 @@
+/* =========================================================
+   BONO CATERING — dark-mode.css
+   Overrides design tokens when [data-theme="dark"] is set on
+   <html>. Theme is applied pre-paint by the inline script in
+   index.html to avoid a flash of the wrong theme, and toggled
+   at runtime by js/darkmode.js.
+========================================================= */
+
+[data-theme="dark"] {
+  --background: #16181A;
+  --card: #1F2225;
+
+  --secondary: #2A2320;
+  --accent: #6FA57A;
+  --accent-light: #82B78D;
+
+  --primary: #FF7A47;
+  --primary-dark: #FF6B35;
+
+  --text-primary: #F3F3F1;
+  --text-secondary: #A2A7AC;
+
+  --border: #33373B;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] .site-header {
+  background: rgba(22, 24, 26, 0.85);
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(180deg, var(--secondary) 0%, var(--background) 78%);
+}
+
+[data-theme="dark"] .section-divider { fill: var(--background); }
+
+[data-theme="dark"] .menu-card-badge { color: #16181A; }
+
+[data-theme="dark"] .add-to-cart-btn { color: var(--primary); }
+[data-theme="dark"] .add-to-cart-btn:hover,
+[data-theme="dark"] .add-to-cart-btn.is-added { color: #16181A; }
+
+[data-theme="dark"] .site-footer { background: #12211A; }
+
+[data-theme="dark"] .contact-map { filter: brightness(0.85) contrast(1.05) grayscale(0.15); }
+
+/* Smooth theme transition for the elements that change most */
+body, .site-header, .menu-card, .testimonial-card, .faq-item, .cart-drawer, .form-row input, .form-row textarea {
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}

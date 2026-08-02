@@ -1,0 +1,96 @@
+/* =========================================================
+   BONO CATERING — responsive.css
+   Mobile-first base lives in style.css. This file layers on
+   larger breakpoints: tablet (>=640px) and desktop (>=1024px).
+========================================================= */
+
+/* ---------------------------------------------------------
+   Tablet — 640px and up
+--------------------------------------------------------- */
+@media (min-width: 640px) {
+  .hero-cta { flex-wrap: nowrap; }
+
+  .testimonial-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .menu-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+  /* Restore larger card proportions */
+  .menu-card { padding: 18px; }
+  .menu-card-title { font-size: 1.02rem; }
+  .menu-card-desc { font-size: 0.85rem; }
+  .menu-card-footer { flex-wrap: nowrap; gap: 10px; }
+  .qty-stepper { padding: 4px; gap: 10px; }
+  .add-to-cart-btn { font-size: 0.85rem; padding: 10px; margin-top: 4px; }
+
+  .about-inner { flex-direction: row; align-items: center; text-align: left; }
+  .about-visual { max-width: 320px; flex: none; }
+
+  .contact-inner { flex-direction: row; align-items: flex-start; }
+  .contact-info { flex: 1; }
+  .contact-map { flex: 1; align-self: stretch; }
+
+  .footer-inner { grid-template-columns: 1.4fr 1fr 1fr; }
+}
+
+/* ---------------------------------------------------------
+   Desktop — 1024px and up
+--------------------------------------------------------- */
+@media (min-width: 1024px) {
+  :root { --header-height: 84px; }
+
+  /* Header: full inline nav replaces the mobile drawer */
+  .nav-toggle { display: none; }
+
+  .main-nav {
+    position: static;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    overflow: visible;
+    flex: none;
+    display: block;
+    margin-right: auto;
+    margin-left: 40px;
+  }
+  .main-nav ul { flex-direction: row; gap: 28px; }
+  .main-nav a {
+    padding: 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+    border-bottom: none;
+    position: relative;
+  }
+  .main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform var(--transition-fast);
+  }
+  .main-nav a:hover::after { transform: scaleX(1); }
+
+  .btn-order-now { display: inline-flex; margin-left: 8px; }
+
+  /* Hero: two-column layout with visual beside copy */
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    padding-bottom: 90px;
+  }
+  .hero-copy { flex: 1.1; }
+  .hero-visual { flex: 1; max-width: 460px; margin: 0; }
+  .hero-stats { max-width: 460px; }
+
+  .about-visual { max-width: 380px; }
+
+  .cart-drawer { width: 420px; }
+}
+
+@media (min-width: 1280px) {
+  .menu-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+}

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BONO CATERING — Hidangan Berkualitas untuk Setiap Momen Istimewa</title>
+<meta name="description" content="BONO CATERING menyediakan paket ayam bakar, prasmanan, snack box, menu harian, dan kue tradisional. Pesan mudah lewat WhatsApp, hidangan siap untuk setiap momen istimewa Anda.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dark-mode.css">
+
+<!--
+  Anti-flash theme script.
+  Runs before first paint so the saved theme (or system preference)
+  is applied immediately instead of flashing light mode first.
+-->
+<script>
+  (function () {
+    var saved = localStorage.getItem('bono-theme');
+    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+
+<!-- Skip link for keyboard / screen reader users -->
+<a class="skip-link" href="#main-content">Langsung ke konten utama</a>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+
+    <a href="#home" class="brand" aria-label="BONO CATERING — kembali ke beranda">
+      <img src="assets/logo/logo.png" alt="BONO CATERING Logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">BONO</span>
+        <span class="brand-sub">CATERING</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#home"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Beranda</a></li>
+        <li><a href="#menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>Menu</a></li>
+        <li><a href="#tentang"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Tentang</a></li>
+        <li><a href="#testimoni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Testimoni</a></li>
+        <li><a href="#faq"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>FAQ</a></li>
+        <li><a href="#kontak"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Kontak</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+
+      <button class="icon-btn" id="searchToggle" aria-label="Buka pencarian menu" aria-expanded="false" aria-controls="searchBar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+
+      <button class="icon-btn" id="themeToggle" aria-label="Ganti tema terang / gelap">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+
+      <a href="#menu" class="btn btn-primary btn-order-now">Pesan Sekarang</a>
+
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mainNav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Collapsible search bar -->
+  <div class="search-bar" id="searchBar" hidden>
+    <div class="container search-bar-inner">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="searchInput" placeholder="Cari menu, misal: ayam bakar, snack box, klepon..." aria-label="Cari menu">
+      <button id="searchClose" aria-label="Tutup pencarian">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- =====================================================
+       HERO SECTION
+  ===================================================== -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Katering pilihan warga &amp; perusahaan</p>
+        <h1>Hidangan Berkualitas<br>untuk Setiap <span class="text-accent">Momen Istimewa</span></h1>
+        <p class="hero-desc">
+          Dari nasi box harian hingga prasmanan acara besar — BONO CATERING menyiapkan
+          setiap hidangan dengan bahan segar dan cita rasa rumahan, dipesan langsung lewat WhatsApp
+          tanpa ribet.
+        </p>
+        <div class="hero-cta">
+          <a href="#menu" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+            Lihat Menu
+          </a>
+          <a href="#kontak" class="btn btn-outline btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Hubungi Kami
+          </a>
+        </div>
+
+        <dl class="hero-stats">
+          <div class="stat">
+            <dt>Pelanggan puas</dt>
+            <dd><span class="stat-number" data-count="1200">0</span>+</dd>
+          </div>
+          <div class="stat">
+            <dt>Pesanan selesai</dt>
+            <dd><span class="stat-number" data-count="4800">0</span>+</dd>
+          </div>
+          <div class="stat">
+            <dt>Tingkat kepuasan</dt>
+            <dd><span class="stat-number" data-count="98">0</span>%</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <svg viewBox="0 0 420 420" class="leaf-plate">
+          <defs>
+            <clipPath id="leafClip">
+              <path d="M210 20c90 10 170 70 180 165 8 90-60 190-180 195C90 375 22 275 30 185 40 90 120 10 210 20Z"/>
+            </clipPath>
+          </defs>
+          <path d="M210 20c90 10 170 70 180 165 8 90-60 190-180 195C90 375 22 275 30 185 40 90 120 10 210 20Z" fill="var(--accent)" opacity="0.12"/>
+          <path d="M210 40c78 9 148 62 157 143 7 78-52 165-157 170C108 358 48 272 55 190c9-83 82-155 155-150Z" fill="var(--accent)" opacity="0.9"/>
+          <g clip-path="url(#leafClip)">
+            <circle cx="210" cy="210" r="130" fill="var(--card)"/>
+            <circle cx="210" cy="210" r="98" fill="var(--secondary)"/>
+            <!-- rice -->
+            <ellipse cx="180" cy="225" rx="46" ry="30" fill="#FFFDF8"/>
+            <!-- ayam bakar -->
+            <ellipse cx="252" cy="200" rx="44" ry="30" fill="#C9722E"/>
+            <ellipse cx="252" cy="200" rx="44" ry="30" fill="var(--primary)" opacity="0.55"/>
+            <!-- sambal -->
+            <circle cx="220" cy="255" r="16" fill="#B3311D"/>
+            <!-- lalapan -->
+            <path d="M150 200c10-18 30-24 44-14-6 18-26 26-44 14Z" fill="var(--accent)"/>
+            <path d="M270 250c14-10 32-6 40 8-14 12-34 8-40-8Z" fill="var(--accent)"/>
+          </g>
+          <!-- steam -->
+          <g class="steam" stroke="var(--primary)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55">
+            <path d="M195 120c-8 10 8 16 0 26" />
+            <path d="M215 112c-8 10 8 16 0 26" />
+            <path d="M235 120c-8 10 8 16 0 26" />
+          </g>
+        </svg>
+        
+      </div>
+    </div>
+
+    <!-- section divider -->
+    <div class="line-divider line-divider-bottom"></div>
+  </section>
+
+  <!-- =====================================================
+       MENU SECTION
+  ===================================================== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Menu kami</p>
+        <h2>Pilih Hidangan, Kami Siapkan</h2>
+        <p class="section-desc">Semua paket bisa disesuaikan jumlah dan catatannya sebelum dipesan lewat WhatsApp.</p>
+      </div>
+
+      <!-- Category filter tabs -->
+      <div class="menu-toolbar reveal">
+        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Kategori menu">
+          <button class="tab active" data-category="all" role="tab" aria-selected="true">Semua</button>
+          <button class="tab" data-category="ayam-bakar" role="tab" aria-selected="false">Ayam Bakar</button>
+          <button class="tab" data-category="prasmanan" role="tab" aria-selected="false">Prasmanan</button>
+          <button class="tab" data-category="snack-box" role="tab" aria-selected="false">Snack Box</button>
+          <button class="tab" data-category="menu-harian" role="tab" aria-selected="false">Menu Harian</button>
+          <button class="tab" data-category="kue-tradisional" role="tab" aria-selected="false">Kue Tradisional</button>
+        </div>
+
+        <label class="sort-select">
+          <span class="visually-hidden">Urutkan menu</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8h12M9 12h6M11 16h2"/></svg>
+          <select id="sortSelect" aria-label="Urutkan menu">
+            <option value="default">Urutan default</option>
+            <option value="price-asc">Harga: rendah ke tinggi</option>
+            <option value="price-desc">Harga: tinggi ke rendah</option>
+            <option value="name-asc">Nama: A-Z</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="menu-empty-state" id="menuEmptyState" hidden>Menu tidak ditemukan. Coba kata kunci atau kategori lain.</p>
+      <p class="menu-result-count" id="menuResultCount" aria-live="polite"></p>
+
+      <div class="menu-grid" id="menuGrid" aria-live="polite">
+        <!-- Menu cards are rendered here by js/app.js -->
+      </div>
+
+      <p class="menu-note">
+        <strong>Catatan:</strong> Paket ayam bakar dapat ditambah <em>kentang ati</em> atau
+        <em>tumisan sayur</em> — cukup tuliskan di catatan saat checkout.
+      </p>
+    </div>
+    <!-- section divider -->
+    <div class="line-divider line-divider-bottom"></div>
+  </section>
+
+  <!-- =====================================================
+       ABOUT / TENTANG
+  ===================================================== -->
+  <section class="about-section" id="tentang">
+    <div class="container about-inner">
+      <div class="about-visual reveal" aria-hidden="true">
+        <svg viewBox="0 0 320 320" width="100%">
+          <rect x="10" y="10" width="300" height="300" rx="28" fill="var(--secondary)"/>
+          <circle cx="160" cy="130" r="70" fill="var(--primary)" opacity="0.9"/>
+          <path d="M60 260c20-40 60-60 100-60s80 20 100 60" fill="none" stroke="var(--accent)" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="130" cy="115" r="8" fill="var(--secondary)"/>
+          <circle cx="190" cy="115" r="8" fill="var(--secondary)"/>
+          <path d="M130 150q30 20 60 0" stroke="var(--secondary)" stroke-width="8" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">Tentang BONO CATERING</p>
+        <h2>Dimasak dengan Standar Dapur Keluarga, Disajikan Sekelas Acara Besar</h2>
+        <p>
+          BONO CATERING melayani kebutuhan makan harian, arisan, syukuran, rapat kantor, hingga
+          prasmanan pernikahan. Setiap pesanan dimasak pada hari yang sama, menggunakan bahan segar
+          yang dipilih langsung oleh tim dapur kami.
+        </p>
+        <ul class="about-points">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Bahan segar, dimasak di hari pemesanan
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Pemesanan cepat lewat WhatsApp
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Cocok untuk acara kecil maupun besar
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- section divider -->
+    <div class="line-divider line-divider-bottom"></div>
+  </section>
+
+  <!-- =====================================================
+       TESTIMONIALS
+  ===================================================== -->
+  <section class="testimonial-section" id="testimoni">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Kata pelanggan</p>
+        <h2>Dipercaya Warga &amp; Perusahaan Sekitar</h2>
+      </div>
+
+      <div class="testimonial-grid">
+
+        <article class="testimonial-card reveal">
+          <div class="stars" aria-label="Penilaian 5 dari 5 bintang">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+          </div>
+          <p>&ldquo;Ayam bakarnya empuk dan bumbunya nempel banget. Pesan untuk 40 kotak, datang tepat waktu.&rdquo;</p>
+          <div class="testimonial-author">
+            <span class="avatar" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.6-4 5-6 8-6s6.4 2 8 6"/></svg>
+            </span>
+            <div>
+              <p class="author-name">Ratna W.</p>
+              <p class="author-role">Acara Kantor</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="stars" aria-label="Penilaian 5 dari 5 bintang">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+          </div>
+          <p>&ldquo;Prasmanan syukuran rumah jadi gampang, tinggal chat WhatsApp langsung dibalas cepat.&rdquo;</p>
+          <div class="testimonial-author">
+            <span class="avatar" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.6-4 5-6 8-6s6.4 2 8 6"/></svg>
+            </span>
+            <div>
+              <p class="author-name">Budi S.</p>
+              <p class="author-role">Syukuran Keluarga</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="stars" aria-label="Penilaian 5 dari 5 bintang">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5 4.9 1.2 7-6.3-3.3-6.3 3.3 1.2-7-5-4.9 7-1Z"/></svg>
+          </div>
+          <p>&ldquo;Langganan nasi kotak harian buat tim kami, rasanya konsisten enak tiap hari.&rdquo;</p>
+          <div class="testimonial-author">
+            <span class="avatar" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.6-4 5-6 8-6s6.4 2 8 6"/></svg>
+            </span>
+            <div>
+              <p class="author-name">Dewi A.</p>
+              <p class="author-role">Menu Harian Kantor</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+    <!-- section divider -->
+    <div class="line-divider line-divider-bottom"></div>
+  </section>
+
+  <!-- =====================================================
+       FAQ
+  ===================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container faq-inner">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pertanyaan umum</p>
+        <h2>Masih Ada yang Ingin Ditanyakan?</h2>
+      </div>
+
+      <div class="faq-list" id="faqList">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>Berapa lama waktu pemesanan minimal sebelum acara?</span>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Untuk menu harian dan snack box, pesan minimal H-1. Untuk prasmanan acara besar, kami sarankan pesan 3-7 hari sebelumnya agar bahan dan tim siap.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>Apakah bisa pesan untuk jumlah kecil (di bawah 10 porsi)?</span>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Bisa. Paket ayam bakar dan snack box tersedia mulai dari jumlah kecil. Untuk prasmanan, minimal pemesanan menyesuaikan jumlah tamu — silakan tanyakan lewat WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>Apakah bisa request menu di luar daftar?</span>
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Bisa, terutama untuk paket prasmanan. Tuliskan permintaan Anda di kolom catatan saat checkout, tim kami akan konfirmasi lewat WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section divider -->
+    <div class="line-divider line-divider-bottom"></div>
+  </section>
+
+  <!-- =====================================================
+       CONTACT
+  ===================================================== -->
+  <section class="contact-section" id="kontak">
+    <div class="container contact-inner">
+
+      <div class="contact-info reveal">
+        <p class="eyebrow">Hubungi kami</p>
+        <h2>Siap Bantu Acara Anda</h2>
+        <p class="section-desc">Ada pertanyaan sebelum pesan? Hubungi kami lewat WhatsApp atau kunjungi dapur kami.</p>
+
+        <ul class="contact-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Jl. Mbah Topo, RT.001/RW.001, Bojong Rawalumbu, Kec. Rawalumbu, Kota Bks, Jawa Barat 17116</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2Z"/></svg>
+            <span>+62 813-1260-9775</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            <span>setiabuana123@gmail.com</span>
+          </li>
+        </ul>
+
+        <a href="#" id="contactWaBtn" class="btn btn-primary btn-lg btn-wa">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.7.8-.9 1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.4c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.6 1.1 2.8.1.2 1.9 2.9 4.6 4a15 15 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1c.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3Z"/></svg>
+          Chat via WhatsApp
+        </a>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <label for="cfName">Nama</label>
+            <input type="text" id="cfName" name="name" required placeholder="Nama Anda">
+          </div>
+          <div class="form-row">
+            <label for="cfMessage">Pesan</label>
+            <textarea id="cfMessage" name="message" rows="3" required placeholder="Tulis pertanyaan Anda..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline">Kirim Pertanyaan</button>
+        </form>
+      </div>
+
+      <div class="contact-map reveal">
+        <iframe
+          title="Lokasi BONO CATERING"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=106.98125%2C-6.28353%2C107.00125%2C-6.26353&layer=mapnik&marker=-6.273535383317703%2C106.99125751625061"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    <!-- section divider -->
+    <div class="line-divider line-divider-bottom"></div>
+  </section>
+
+</main>
+
+<!-- =====================================================
+     CART DRAWER (off-canvas)
+===================================================== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang pesanan" aria-hidden="true">
+  <div class="cart-header">
+    <h2>Keranjang Pesanan</h2>
+    <button class="icon-btn" id="cartClose" aria-label="Tutup keranjang">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="cart-body" id="cartBody">
+    <!-- Cart items rendered by js/cart.js -->
+    <div class="cart-empty" id="cartEmpty">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+      <p>Keranjang masih kosong.</p>
+      <a href="#menu" class="btn btn-outline" id="cartEmptyCta">Lihat Menu</a>
+    </div>
+    <ul class="cart-items" id="cartItems" hidden></ul>
+  </div>
+
+  <div class="cart-footer" id="cartFooter" hidden>
+    <div class="form-row">
+      <label for="cartAddress">Alamat pengantaran</label>
+      <textarea id="cartAddress" rows="2" placeholder="Tulis alamat lengkap..."></textarea>
+    </div>
+    <div class="form-row">
+      <label for="cartNotes">Catatan tambahan</label>
+      <textarea id="cartNotes" rows="2" placeholder="Contoh: tambah kentang ati, kirim jam 11 siang..."></textarea>
+    </div>
+
+    <div class="cart-summary">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">Rp0</span>
+      </div>
+      <div class="cart-summary-row cart-summary-total">
+        <span>Total</span>
+        <span id="cartTotal">Rp0</span>
+      </div>
+    </div>
+
+    <button class="btn btn-primary btn-lg btn-wa btn-block" id="checkoutBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.7.8-.9 1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.4c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.6 1.1 2.8.1.2 1.9 2.9 4.6 4a15 15 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1c.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3Z"/></svg>
+      Pesan via WhatsApp
+    </button>
+  </div>
+</aside>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+        <img src="assets/logo/logo.png" alt="BONO CATERING Logo" class="footer-logo" style="margin-bottom: 0;">
+        <span class="brand-text">
+          <span class="brand-name" style="font-size: 1.2rem; display: block;">BONO</span>
+          <span class="brand-sub" style="display: block;">CATERING</span>
+        </span>
+      </div>
+      <p style="margin-top: 0;">Hidangan Berkualitas untuk Setiap Momen Istimewa.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram BONO CATERING">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook BONO CATERING">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok BONO CATERING">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 3a5.5 5.5 0 0 0 5.5 5.5"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3>Tautan</h3>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Kontak</h3>
+      <ul>
+        <li>+62 813-1260-9775</li>
+        <li>setiabuana123@gmail.com</li>
+        <li>Bojong Rawalumbu, Kota Bekasi</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span id="year"></span> BONO CATERING. Semua hak cipta dilindungi.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- =====================================================
+     FLOATING ACTION BUTTONS
+===================================================== -->
+<div class="fab-container">
+  <button class="icon-btn fab-btn fab-cart" id="fabCartToggle" aria-label="Buka keranjang pesanan" aria-expanded="false" aria-controls="cartDrawer">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+    <span class="cart-count" id="fabCartCount" hidden>0</span>
+  </button>
+  <a href="#" class="icon-btn fab-btn fab-wa" id="fabWaBtn" aria-label="Chat via WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.7.8-.9 1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.4c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.6 1.1 2.8.1.2 1.9 2.9 4.6 4a15 15 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1c.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3Z"/></svg>
+  </a>
+</div>
+
+<!-- =====================================================
+     IMAGE MODAL
+===================================================== -->
+<div class="image-modal" id="imageModal" aria-hidden="true">
+  <div class="image-modal-overlay" id="imageModalOverlay"></div>
+  <div class="image-modal-content">
+    <button class="icon-btn image-modal-close" id="imageModalClose" aria-label="Tutup gambar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <img src="" alt="Detail Menu" id="imageModalImg">
+  </div>
+</div>
+
+<!-- =====================================================
+     SCRIPTS
+     Loaded in dependency order: shared state first (app.js),
+     then feature modules that attach to the shared BONO namespace.
+===================================================== -->
+<script src="js/app.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/search.js" defer></script>
+<script src="js/filter.js" defer></script>
+<script src="js/faq.js" defer></script>
+<script src="js/darkmode.js" defer></script>
+<script src="js/whatsapp.js" defer></script>
+</body>
+</html>
