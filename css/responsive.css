@@ -24,10 +24,7 @@
   .about-inner { flex-direction: row; align-items: center; text-align: left; }
   .about-visual { max-width: 320px; flex: none; }
 
-  .contact-inner { flex-direction: row; align-items: flex-start; }
-  .contact-info { flex: 1; }
-  .contact-map { flex: 1; align-self: stretch; }
-
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .footer-inner { grid-template-columns: 1.4fr 1fr 1fr; }
 }
 
